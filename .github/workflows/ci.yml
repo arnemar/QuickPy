@@ -1,41 +1,36 @@
-name: Build and Release VSIX
+name: Publish VSIX
 
 on:
   push:
-    branches:
-      - main  # Triggers when there's a push to the main branch
+    tags:
+      - '*'
 
 jobs:
   build:
-    runs-on: ubuntu-latest  # Running on the latest Ubuntu runner
+    runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout the code from the repository
-      - name: Checkout repository
-        uses: actions/checkout@v2
+    - name: Checkout code
+      uses: actions/checkout@v2
 
-      # Step 2: Set up Node.js (using version 20.x)
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '20.x'
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '20.x'  # Use the version of Node.js you need
 
-      # Step 3: Install dependencies
-      - name: Install dependencies
-        run: npm install
+    - name: Install dependencies
+      run: npm install
+    
+    - name: Compile typescript
+      run: npm run compile
 
-      # Step 4: Compile TypeScript (using the "compile" script from package.json)
-      - name: Compile TypeScript
-        run: npm run compile
+    - name: Build the VSIX file
+      run: npm run package
 
-      # Step 5: Package the VSIX file (using the "package" script from package.json)
-      - name: Package VSIX file
-        run: npm run package
-
-      # Step 6: Create a GitHub release and upload the VSIX file
-      - name: Create GitHub release and upload VSIX
-        uses: softprops/action-gh-release@v1
-        with:
-          files: ./quickpy-*.vsix  # Replace with the actual name of your VSIX file (it will be named quickpy-{version}.vsix)
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Automatically provided by GitHub
+    - name: Upload VSIX file as GitHub release asset
+      uses: ghadidi/gh-release-action@v1
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        tag_name: ${{ github.ref_name }}
+        release_name: "QuickPy-${{ github.ref_name }}"
+        files: './*.vsix'
