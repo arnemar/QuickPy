@@ -32,6 +32,6 @@ jobs:
       with:
         tag_name: ${{ github.ref_name }}
         name: "QuickPy-${{ github.ref_name }}"
-        files: ./QuickPy-*.vsix
+        files: ./*.vsix
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
