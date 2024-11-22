@@ -1,5 +1,6 @@
 {
 	"compilerOptions": {
+		"outDir": "./dist",
 		"module": "Node16",
 		"target": "ES2022",
 		"lib": [
