@@ -4,7 +4,7 @@ All notable changes to the "QuickPy" extension will be documented in this file.
 
 This project adheres to [Keep a Changelog](http://keepachangelog.com/).
 
-## [1.0.0] 2024-11_23
+## [1.0.0] 2024-11-23
 ### Added
 - Live Python code execution that evaluates up to the current line in a file.
 - Automatic debounce delay configuration for live execution (default: 300ms).
