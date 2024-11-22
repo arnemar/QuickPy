@@ -76,9 +76,9 @@ This project is licensed under the MIT License. See the [LICENSE](./LICENSE) fil
 
 ## Acknowledgements
 
-    - This project is inspired by [Lowpy](https://github.com/kallehallden/lowpy) by [Kalle Hallden](https://github.com/kallehallden).
-    - [Quokka.js](https://quokkajs.com/) for JavaScript inspiration.
-    - Built using the [VS Code API](https://code.visualstudio.com/api) and [Python](https://www.python.org/).
+ - This project is inspired by [Lowpy](https://github.com/kallehallden/lowpy) by [Kalle Hallden](https://github.com/kallehallden).
+ - [Quokka.js](https://quokkajs.com/) for JavaScript inspiration.
+ - Built using the [VS Code API](https://code.visualstudio.com/api) and [Python](https://www.python.org/).
 
 ---
 
@@ -86,7 +86,7 @@ This project is licensed under the MIT License. See the [LICENSE](./LICENSE) fil
 
 For any questions, issues, or suggestions:
 
-    Open an issue on [Github](https://github.com/arnemar/quickpy/issues).
+ Open an issue on [Github](https://github.com/arnemar/quickpy/issues).
 
 ---
 
