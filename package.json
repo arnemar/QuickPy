@@ -1,8 +1,10 @@
 {
   "name": "quickpy",
   "displayName": "QuickPy",
-  "description": "",
-  "version": "0.0.1",
+  "description": "A live execution helper for Python code in VS Code.",
+  "version": "1.0.0",
+  "publisher": "arnemar",
+  "keywords": ["python", "live execution", "vscode"],
   "engines": {
     "vscode": "^1.95.0"
   },
@@ -14,12 +16,7 @@
   ],
   "main": "./dist/extension.js",
   "contributes": {
-    "commands": [
-      {
-        "command": "quickpy.helloWorld",
-        "title": "Hello World"
-      }
-    ],
+    "commands": [],
     "configuration": {
       "properties": {
         "pythonLiveExecution.debounceDelay": {
