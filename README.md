@@ -25,7 +25,7 @@ We welcome contributions to improve QuickPy! Here’s how you can get started:
 
 1. Fork the repository and clone it locally:
    ```bash
-   git clone https://github.com/arnemar/QuickPy.git
+   git clone https://github.com/arnemar/quickpy.git
 2. Install dependencies:
    ```bash
    npm install
