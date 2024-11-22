@@ -1,6 +1,6 @@
 # QuickPy
 
-[![Build Status](https://img.shields.io/github/actions/workflow/status/arnemar/quickpy/CI.yml?branch=main)](https://github.com/arnemar/quickpy/actions)
+[![Build Status](https://img.shields.io/github/workflow/status/arnemar/quickpy/CI)](https://github.com/arnemar/quickpy/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 **QuickPy** is a Visual Studio Code extension that provides **live feedback** on Python code execution. This is a modification of the original project by [Kalle Hallden](https://github.com/kallehallden).
