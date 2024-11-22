@@ -28,7 +28,7 @@ jobs:
       run: npm run package
 
     - name: Upload VSIX file as GitHub release asset
-      uses: ghadidi/gh-release-action@v1
+      uses: softprops/action-gh-release@v1
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
         tag_name: ${{ github.ref_name }}
