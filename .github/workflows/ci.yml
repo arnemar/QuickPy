@@ -3,7 +3,7 @@ name: Publish VSIX
 on:
   push:
     tags:
-      - '*'
+      - 'v*.*.*' 
 
 jobs:
   build:
@@ -30,7 +30,8 @@ jobs:
     - name: Upload VSIX file as GitHub release asset
       uses: softprops/action-gh-release@v1
       with:
-        token: ${{ secrets.GITHUB_TOKEN }}
         tag_name: ${{ github.ref_name }}
-        release_name: "QuickPy-${{ github.ref_name }}"
-        files: './*.vsix'
+        name: "QuickPy-${{ github.ref_name }}"
+        files: ./QuickPy-*.vsix
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
