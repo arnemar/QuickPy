@@ -4,6 +4,7 @@
   "description": "A live execution helper for Python code in VS Code.",
   "version": "1.0.0",
   "publisher": "arnemar",
+  "icon": "images/logo.png",
   "keywords": ["python", "live execution", "vscode"],
   "engines": {
     "vscode": "^1.95.0"
